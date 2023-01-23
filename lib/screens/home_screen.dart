@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import '';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,10 +14,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: Drawer(),
+      //appBar: PreferredSizeWidget?(),
+      drawer: const Drawer(),
       body: Column(
         children: [
+          Row(children: const [
+            Icon(Icons.more),
+            Text(
+              'AULC',
+              // ignore: todo
+              //TODO: set the primary color and add it here
+              style: TextStyle(color: Colors.teal)
+              //GoogleFonts.style(),
+            ),
+          ]),
           Container(),
         ],
       ),
