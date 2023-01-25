@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:projectx/util/constants.dart';
 //import '';
 
 class HomeScreen extends StatefulWidget {
@@ -18,13 +20,15 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: const Drawer(),
       body: Column(
         children: [
-          Row(children: const [
+          Row(children: [
             Icon(Icons.more),
             Text(
               'AULC',
               // ignore: todo
               //TODO: set the primary color and add it here
-              style: TextStyle(color: Colors.teal)
+              style: GoogleFonts.cormorantGaramond(
+                color: kPrimaryColor
+              ),
               //GoogleFonts.style(),
             ),
           ]),
