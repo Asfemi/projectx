@@ -15,25 +15,36 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       //appBar: PreferredSizeWidget?(),
       drawer: const Drawer(),
-      body: Column(
-        children: [
-          Row(children: [
-            Icon(Icons.more),
-            Text(
-              'AULC',
-              //AULC is short for adeleke university law clinic
-              style: GoogleFonts.cormorantGaramond(
-                color: kPrimaryColor
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            //custom appbar
+            Row(children: [
+              const Icon(Icons.more),
+              Text(
+                'AULC',
+                //AULC is short for adeleke university law clinic
+                style: GoogleFonts.cormorantGaramond(
+                  color: kPrimaryColor
+                ),
+                //GoogleFonts.style(),
               ),
-              //GoogleFonts.style(),
+            
+            ]),
+            //landing/homepage background image            
+            Container(
+             height: size.height * 0.9,
+             width: size.width,
+            decoration: const BoxDecoration(
+              image: DecorationImage(image: AssetImage(''))
             ),
-          
-          ]),
-          Container(),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
