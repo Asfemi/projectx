@@ -24,13 +24,13 @@ class _HomeScreenState extends State<HomeScreen> {
             Icon(Icons.more),
             Text(
               'AULC',
-              // ignore: todo
-              //TODO: set the primary color and add it here
+              //AULC is short for adeleke university law clinic
               style: GoogleFonts.cormorantGaramond(
                 color: kPrimaryColor
               ),
               //GoogleFonts.style(),
             ),
+          
           ]),
           Container(),
         ],
