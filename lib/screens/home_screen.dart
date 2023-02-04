@@ -28,11 +28,14 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SliverPersistentHeader(
         pinned: true,
         floating: true,
-        delegate: _SliverDelegate(child: SliverList(delegate: SliverChildBuilderDelegate((context, int index) {
-      return Container(color: Colors.blue, height: 150.0);
-    },
-    childCount: 10,),
-      ),
+        delegate: _SliverDelegate(
+          child: SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, int index) {
+               return Container(color: Colors.blue, height: 150.0,);
+              },
+            childCount: 10,),
+          ),
       // body: SingleChildScrollView(
       //   child: Column(
       //     children: [
@@ -60,7 +63,9 @@ class _HomeScreenState extends State<HomeScreen> {
       //     ],
       //   ),
       // ),
-    ),), );
+        ),
+      ), 
+    );
   }
 }
 
