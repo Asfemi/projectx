@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Column(
         children: [
+          //appBar
           Container(
             width: size.width,
             height: size.height * 0.1,
@@ -73,7 +74,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-          )
+          ),
+          Container(
+            height: size.height * 0.8,
+            width: size.width,
+            child: const Image(image:  AssetImage('lib/assets/images/gad.jpg'), fit: BoxFit.fill,),
+          ),
         ],
       ),
     );
