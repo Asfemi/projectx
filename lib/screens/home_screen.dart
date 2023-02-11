@@ -323,7 +323,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: Icon(
-                                  LineIcons.facebook,
+                                  LineIcons.facebookF,
                                   size: 20.0,
                                   color: CustomColor.white,
                                 ),
