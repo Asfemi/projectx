@@ -275,129 +275,160 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ReuseableTextButton(
-                    text: 'ABOUT US',
-                    onpressed: () {},
-                  ),
-                  ReuseableTextButton(
-                    text: 'OUR TEAM',
-                    onpressed: () {},
-                  ),
-                  ReuseableTextButton(
-                    text: 'OUR EXPERTISE',
-                    onpressed: () {},
-                  ),
-                  ReuseableTextButton(
-                    text: 'NEWS',
-                    onpressed: () {},
-                  ),
-                  ReuseableTextButton(
-                    text: 'CAREERS',
-                    onpressed: () {},
-                  ),
-                  ReuseableTextButton(
-                    text: 'CONTACT US',
-                    onpressed: () {},
-                  ),
-                  Row(
-                    children: [
-                      Material(
-                        type: MaterialType.transparency,
-                        child: Ink(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.green, width: 5),
-                            color: Colors.greenAccent,
-                            borderRadius: BorderRadius.circular(50.0),
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(100.0),
-                            onTap: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Icon(
-                                LineIcons.facebook,
-                                size: 20.0,
-                                color: CustomColor.white,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 80.0, vertical: 40.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ReuseableTextButton(
+                      text: 'ABOUT US',
+                      onpressed: () {},
+                    ),
+                    ReuseableTextButton(
+                      text: 'OUR TEAM',
+                      onpressed: () {},
+                    ),
+                    ReuseableTextButton(
+                      text: 'OUR EXPERTISE',
+                      onpressed: () {},
+                    ),
+                    ReuseableTextButton(
+                      text: 'NEWS',
+                      onpressed: () {},
+                    ),
+                    ReuseableTextButton(
+                      text: 'CAREERS',
+                      onpressed: () {},
+                    ),
+                    ReuseableTextButton(
+                      text: 'CONTACT US',
+                      onpressed: () {},
+                    ),
+                    Row(
+                      children: [
+                        Material(
+                          type: MaterialType.transparency,
+                          child: Ink(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 1),
+                              //color: Colors.greenAccent,
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(100.0),
+                              onTap: () {},
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Icon(
+                                  LineIcons.facebook,
+                                  size: 20.0,
+                                  color: CustomColor.white,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      const SizedBox(width: 20),
-                      Material(
-                        type: MaterialType.transparency,
-                        child: Ink(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.green, width: 5),
-                            color: Colors.greenAccent,
-                            borderRadius: BorderRadius.circular(50.0),
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(100.0),
-                            onTap: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Icon(
-                                LineIcons.linkedinIn,
-                                size: 20.0,
-                                color: CustomColor.white,
+                        const SizedBox(width: 20),
+                        Material(
+                          type: MaterialType.transparency,
+                          child: Ink(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 1),
+                              //color: Colors.greenAccent,
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(100.0),
+                              onTap: () {},
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Icon(
+                                  LineIcons.linkedinIn,
+                                  size: 20.0,
+                                  color: CustomColor.white,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  Row(
-                    children: [
-                      Column(
+                      ],
+                    ),
+                    //const SizedBox(height: 50),
+                    SizedBox(
+                      width: size.width,
+                      height: size.height * 0.16,
+                     // padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('(65) 6534 4877', style: GoogleFonts.montserrat(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white),),
-                          Text('6 Battery Road, Level 5, Singapore 049909', style: GoogleFonts.montserrat(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white),),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text('(65) 6534 4877', style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white),),
+                              Text('6 Battery Road, Level 5, Singapore 049909', style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white),),
+                            ],
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                '© 2023 AULC Law Corporation',
+                                style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white),
+                              ),
+                              const SizedBox(width: 5),
+                              Container(
+                                //padding: const EdgeInsets.all(10),
+                                height: 18,
+                                width: 2,
+                                color: Colors.white
+                              ),
+                              const SizedBox(width: 5),
+                              GestureDetector(
+                                onTap: () {},
+                                child: Text('Terms Of Use', style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white),),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text('AULC', style: GoogleFonts.montserrat(
+                                    fontSize: 35,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),),
+                              Container(
+                                height: 2,
+                                width: 90,
+                                color: Colors.white
+                              ),
+                              Text('LAW COOPERATION', style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white),),
+                            ],
+                          ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            '© 2023 AULC Law Corporation',
-                            style: GoogleFonts.montserrat(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white),
-                          ),
-                          const VerticalDivider(
-                            color: Colors.white,
-                            thickness: 0.5,
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('Terms Of Use', style: GoogleFonts.montserrat(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white),),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Text(''),
-                          Text(''),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -424,8 +455,8 @@ class ReuseableTextButton extends StatelessWidget {
         child: Text(
           text,
           style: GoogleFonts.cormorantGaramond(
-            fontSize: 20,
-            fontWeight: FontWeight.w300,
+            fontSize: 30,
+            fontWeight: FontWeight.w500,
             color: Colors.white,
           ),
         ));
