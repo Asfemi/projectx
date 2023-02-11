@@ -17,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 //todo: collect widgets from the portfollio site
+//todo: change the images to network images
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
@@ -90,7 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   fit: BoxFit.fill,
                   colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.5), BlendMode.darken),
+                    Colors.black.withOpacity(0.5),
+                    BlendMode.darken,
+                  ),
                 ),
               ),
               child: Align(
@@ -262,12 +265,170 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               width: size.width,
               height: size.height,
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage(''),),),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('lib/assets/images/kiss.jpg'),
+                  fit: BoxFit.fill,
+                  colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.5),
+                    BlendMode.darken,
+                  ),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ReuseableTextButton(
+                    text: 'ABOUT US',
+                    onpressed: () {},
+                  ),
+                  ReuseableTextButton(
+                    text: 'OUR TEAM',
+                    onpressed: () {},
+                  ),
+                  ReuseableTextButton(
+                    text: 'OUR EXPERTISE',
+                    onpressed: () {},
+                  ),
+                  ReuseableTextButton(
+                    text: 'NEWS',
+                    onpressed: () {},
+                  ),
+                  ReuseableTextButton(
+                    text: 'CAREERS',
+                    onpressed: () {},
+                  ),
+                  ReuseableTextButton(
+                    text: 'CONTACT US',
+                    onpressed: () {},
+                  ),
+                  Row(
+                    children: [
+                      Material(
+                        type: MaterialType.transparency,
+                        child: Ink(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.green, width: 5),
+                            color: Colors.greenAccent,
+                            borderRadius: BorderRadius.circular(50.0),
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(100.0),
+                            onTap: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Icon(
+                                LineIcons.facebook,
+                                size: 20.0,
+                                color: CustomColor.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Material(
+                        type: MaterialType.transparency,
+                        child: Ink(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.green, width: 5),
+                            color: Colors.greenAccent,
+                            borderRadius: BorderRadius.circular(50.0),
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(100.0),
+                            onTap: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Icon(
+                                LineIcons.linkedinIn,
+                                size: 20.0,
+                                color: CustomColor.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text('(65) 6534 4877', style: GoogleFonts.montserrat(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white),),
+                          Text('6 Battery Road, Level 5, Singapore 049909', style: GoogleFonts.montserrat(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white),),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '© 2023 AULC Law Corporation',
+                            style: GoogleFonts.montserrat(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white),
+                          ),
+                          const VerticalDivider(
+                            color: Colors.white,
+                            thickness: 0.5,
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text('Terms Of Use', style: GoogleFonts.montserrat(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white),),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Text(''),
+                          Text(''),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+class ReuseableTextButton extends StatelessWidget {
+  const ReuseableTextButton({
+    super.key,
+    required this.onpressed,
+    required this.text,
+  });
+
+  final String text;
+  final VoidCallback onpressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+        onPressed: onpressed,
+        child: Text(
+          text,
+          style: GoogleFonts.cormorantGaramond(
+            fontSize: 20,
+            fontWeight: FontWeight.w300,
+            color: Colors.white,
+          ),
+        ));
   }
 }
 
