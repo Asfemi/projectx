@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             //home image
             Container(
-              height: size.height * 0.8,
+              height: prescribedHeight * 1.1,
               width: size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -171,42 +171,98 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.indigo,
-                //image: DecorationImage(image: AssetImage(''),),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'STAY AHEAD WITH FOREFRONT: BY AULC',
-                      style: GoogleFonts.cormorantGaramond(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,),
-                    ),
-                    Column(
-                      children: [
-                        const TextField(),
-                        OutlinedButton(
-                          child: Text('SUBSCRIBE NOW', style: GoogleFonts.montserrat(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,),),
-                          onPressed: () {
-                            if (kDebugMode) {
-                              print('Pressed');
-                            }
-                          },
-                        )
-                      ],
-                    ),
-                  ],
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                height: size.height * 0.3,
+                width: size.width * 0.7,
+                decoration: const BoxDecoration(
+                  color: Colors.indigo,
+                  //image: DecorationImage(image: AssetImage(''),),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 350,
+                        child: Text(
+                          'STAY AHEAD WITH FOREFRONT: BY AULC',
+                          maxLines: 2,
+                          style: GoogleFonts.cormorantGaramond(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 300,
+                            child: TextField(
+                              // style: const TextStyle(
+                              //   decoration: TextDecoration.underline,
+                              // ),
+                              textAlign: TextAlign.center,
+                              decoration: InputDecoration(
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: CustomColor.white),
+                                ),
+
+                                //border: InputBorder.none,
+                                hintText: 'TYPE YOUR EMAIL HERE',
+                                hintStyle: GoogleFonts.montserrat(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              onChanged: (value) {},
+                            ),
+                          ),
+                          const SizedBox(height: 30),
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                                side: BorderSide(color: CustomColor.white),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      0), //size.width * 0.005),
+                                )),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20.0, vertical: 10.0),
+                              child: Text(
+                                'SUBSCRIBE NOW',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              if (kDebugMode) {
+                                print('Pressed');
+                              }
+                            },
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
+            ),
+            SizedBox(height: size.height * 0.2),
+            Container(
+              width: size.width,
+              height: size.height,
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage(''),),),
             ),
           ],
         ),
