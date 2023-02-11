@@ -145,10 +145,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      practiceAreaWidget(size: size, image: 'lib/assets/images/kiss.jpg', text: 'Banking and Finance',),
-                       practiceAreaWidget(size: size, image: 'lib/assets/images/kiss.jpg', text: 'Banking and Finance',),
-                        practiceAreaWidget(size: size, image: 'lib/assets/images/kiss.jpg', text: 'Banking and Finance',),
-                         practiceAreaWidget(size: size, image: 'lib/assets/images/kiss.jpg', text: 'Banking and Finance',),
+                      practiceAreaWidget(size: size, image: 'lib/assets/images/a.jpg', text: 'Banking and Finance',),
+                       practiceAreaWidget(size: size, image: 'lib/assets/images/e.jpg', text: 'Environment and Land',),
+                        practiceAreaWidget(size: size, image: 'lib/assets/images/h.jpg', text: 'Family and Gender',),
+                         practiceAreaWidget(size: size, image: 'lib/assets/images/n.jpg', text: 'Criminal',),
                     ],
                   ),
                 ],
