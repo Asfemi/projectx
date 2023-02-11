@@ -5,6 +5,8 @@ import 'package:line_icons/line_icons.dart';
 import 'package:projectx/util/constants.dart';
 
 import '../components/app_bar_texts_widget.dart';
+import '../components/practice_area_widget.dart';
+import '../components/reusable_text_button.dart';
 //import '';
 
 class HomeScreen extends StatefulWidget {
@@ -438,69 +440,5 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class ReuseableTextButton extends StatelessWidget {
-  const ReuseableTextButton({
-    super.key,
-    required this.onpressed,
-    required this.text,
-  });
 
-  final String text;
-  final VoidCallback onpressed;
 
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-        onPressed: onpressed,
-        child: Text(
-          text,
-          style: GoogleFonts.cormorantGaramond(
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
-            color: Colors.white,
-          ),
-        ));
-  }
-}
-
-// ignore: camel_case_types
-class practiceAreaWidget extends StatelessWidget {
-  const practiceAreaWidget({
-    super.key,
-    required this.size,
-    required this.image,
-    required this.text,
-  });
-
-  final Size size;
-  final String image;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-          height: size.height * 0.25,
-          width: size.width * 0.2,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(image), fit: BoxFit.fill),
-          ),
-        ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.only(left: 40, right: 40),
-          child: Text(
-            text,
-            maxLines: 2,
-            style: GoogleFonts.cormorantGaramond(
-                fontSize: 22,
-                fontWeight: FontWeight.w300,
-                color: CustomColor.teal),
-          ),
-        ),
-      ],
-    );
-  }
-}
