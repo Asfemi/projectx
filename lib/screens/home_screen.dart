@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:line_icons/line_icons.dart';
@@ -115,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 300.0, vertical: 150.0),
                   child: Text(
-                    'We are a corporate boutique with a nimble, flexible take on legal work. Our lawyers\’ cross-domain specialisations allow for seamless customised solutions for specific, unique client needs, solving complex briefs with precise strategy.',
+                    'We are a corporate boutique with a nimble, flexible take on legal work. Our lawyers’ cross-domain specialisations allow for seamless customised solutions for specific, unique client needs, solving complex briefs with precise strategy.',
                     style: GoogleFonts.cormorantGaramond(
                         fontSize: 30,
                         fontWeight: FontWeight.w300,
@@ -124,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: prescribedHeight,
               width: size.width,
               child: Column(
@@ -145,13 +146,66 @@ class _HomeScreenState extends State<HomeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      practiceAreaWidget(size: size, image: 'lib/assets/images/a.jpg', text: 'Banking and Finance',),
-                       practiceAreaWidget(size: size, image: 'lib/assets/images/e.jpg', text: 'Environment and Land',),
-                        practiceAreaWidget(size: size, image: 'lib/assets/images/h.jpg', text: 'Family and Gender',),
-                         practiceAreaWidget(size: size, image: 'lib/assets/images/n.jpg', text: 'Criminal',),
+                      practiceAreaWidget(
+                        size: size,
+                        image: 'lib/assets/images/a.jpg',
+                        text: 'Banking and Finance',
+                      ),
+                      practiceAreaWidget(
+                        size: size,
+                        image: 'lib/assets/images/e.jpg',
+                        text: 'Environment and Land',
+                      ),
+                      practiceAreaWidget(
+                        size: size,
+                        image: 'lib/assets/images/h.jpg',
+                        text: 'Family and Gender',
+                      ),
+                      practiceAreaWidget(
+                        size: size,
+                        image: 'lib/assets/images/n.jpg',
+                        text: 'Criminal',
+                      ),
                     ],
                   ),
                 ],
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.indigo,
+                //image: DecorationImage(image: AssetImage(''),),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'STAY AHEAD WITH FOREFRONT: BY AULC',
+                      style: GoogleFonts.cormorantGaramond(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,),
+                    ),
+                    Column(
+                      children: [
+                        const TextField(),
+                        OutlinedButton(
+                          child: Text('SUBSCRIBE NOW', style: GoogleFonts.montserrat(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,),),
+                          onPressed: () {
+                            if (kDebugMode) {
+                              print('Pressed');
+                            }
+                          },
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -161,6 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
+// ignore: camel_case_types
 class practiceAreaWidget extends StatelessWidget {
   const practiceAreaWidget({
     super.key,
@@ -182,10 +237,7 @@ class practiceAreaWidget extends StatelessWidget {
           height: size.height * 0.25,
           width: size.width * 0.2,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(image),
-              fit: BoxFit.fill
-            ),
+            image: DecorationImage(image: AssetImage(image), fit: BoxFit.fill),
           ),
         ),
         const SizedBox(height: 20),

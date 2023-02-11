@@ -15,7 +15,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
-        children: [],
+        children: const [],
       ),
     );
   }
