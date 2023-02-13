@@ -15,28 +15,36 @@ class CustomAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double iconSize = 30;
+
     return Container(
       width: size.width,
       height: size.height * 0.1,
       color: CustomColor.teal,
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          IconButton(
-            icon: const Icon(
-              Icons.more_vert,
-              color: Colors.white,
-            ),
-            onPressed: () {},
-          ),
-          Text(
-            'AULC',
-            style: GoogleFonts.cormorantGaramond(
-                fontSize: 30,
-                fontWeight: FontWeight.w500,
-                color: Colors.white),
+          Row(
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.dashboard,
+                  size: iconSize,
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                ),
+                onPressed: () {},
+              ),
+              const SizedBox(width: 20),
+              Text(
+                'AULC',
+                style: GoogleFonts.cormorantGaramond(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
+              ),
+            ],
           ),
           const SizedBox(width: 30),
           AppBarTextsWidget(
@@ -47,24 +55,29 @@ class CustomAppBarWidget extends StatelessWidget {
             text4: 'About us',
           ),
           const SizedBox(width: 30),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              LineIcons.search,
-              color: Theme.of(context).scaffoldBackgroundColor,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.more_horiz,
-              color: Theme.of(context).scaffoldBackgroundColor,
-            ),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  LineIcons.search,
+                  size: iconSize,
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                ),
+              ),
+              const SizedBox(width: 20),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.more_horiz,
+                  size: iconSize,
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                ),
+              ),
+            ],
           ),
         ],
       ),
     );
   }
 }
-
-
