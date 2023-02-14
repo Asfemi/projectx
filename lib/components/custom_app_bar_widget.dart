@@ -16,6 +16,7 @@ class CustomAppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double iconSize = 30;
+    //todo: handle the onpressed actions on this page
 
     return Container(
       width: size.width,
