@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             HomebodyWidget(prescribedHeight: prescribedHeight, size: size),
             //qoute text
             QuoteWidget(size: size),
-            //sectiun dusplaj
+            //section display
             SectionsDisplay(prescribedHeight: prescribedHeight, size: size),
             SubscribeCard(size: size),
             SizedBox(height: size.height * 0.2),
