@@ -73,6 +73,7 @@ class CustomAppBarWidget extends StatelessWidget {
                   Icons.more_horiz,
                   size: iconSize,
                   color: Theme.of(context).scaffoldBackgroundColor,
+                  //crazy ass theme
                 ),
               ),
             ],
