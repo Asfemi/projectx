@@ -17,6 +17,7 @@ class CustomAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     double iconSize = 30;
     //todo: handle the onpressed actions on this page
+    //samuel build the blog widgets
 
     return Container(
       width: size.width,
