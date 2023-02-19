@@ -39,6 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
             QuoteWidget(size: size),
             //section display
             SectionsDisplay(prescribedHeight: prescribedHeight, size: size),
+            //blog reads
+            //subscribe card
             SubscribeCard(size: size),
             SizedBox(height: size.height * 0.2),
             SummaryPage(size: size),
