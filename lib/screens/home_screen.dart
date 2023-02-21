@@ -43,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //subscribe card
             SubscribeCard(size: size),
             SizedBox(height: size.height * 0.2),
+            //summary page
             SummaryPage(size: size),
           ],
         ),
