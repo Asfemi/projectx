@@ -25,6 +25,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double prescribedHeight = size.height * 0.8;
+    List blogcontent = [
+      'lib/assets/images/a.jpg',
+      'lib/assets/images/e.jpg',
+      'lib/assets/images/h.jpg',
+      'lib/assets/images/j.jpg',
+      'lib/assets/images/n.jpg',
+      'lib/assets/images/kiss.jpg',
+      'lib/assets/images/lip.jpg',
+      'lib/assets/images/gad.jpg',
+    ];
 
     return Scaffold(
       backgroundColor: CustomColor.white,
@@ -40,6 +50,14 @@ class _HomeScreenState extends State<HomeScreen> {
             //section display
             SectionsDisplay(prescribedHeight: prescribedHeight, size: size),
             //blog reads
+            SizedBox(
+              height: prescribedHeight,
+              child: ListView.builder(
+                itemCount: blogcontent.length,
+                itemBuilder: (context, index) => ListTile(
+               leading: Image(image: AssetImage(blogcontent[index])),
+              )),
+            ),
             //subscribe card
             SubscribeCard(size: size),
             SizedBox(height: size.height * 0.2),
