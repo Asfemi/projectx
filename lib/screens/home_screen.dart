@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projectx/model/blogmodel.dart';
 import 'package:projectx/util/constants.dart';
 
 import '../components/custom_app_bar_widget.dart';
@@ -7,6 +8,7 @@ import '../components/quotes_widget.dart';
 import '../components/sections_display.dart';
 import '../components/subsribed_card.dart';
 import '../components/summary_page.dart';
+import '../util/utilities.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,16 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double prescribedHeight = size.height * 0.8;
-    List blogcontent = [
-      'lib/assets/images/a.jpg',
-      'lib/assets/images/e.jpg',
-      'lib/assets/images/h.jpg',
-      'lib/assets/images/j.jpg',
-      'lib/assets/images/n.jpg',
-      'lib/assets/images/kiss.jpg',
-      'lib/assets/images/lip.jpg',
-      'lib/assets/images/gad.jpg',
-    ];
+    List<BlogContent>blogcontents = Utilities.blogContentList();
 
     return Scaffold(
       backgroundColor: CustomColor.white,
@@ -53,10 +46,15 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: prescribedHeight,
               child: ListView.builder(
-                itemCount: blogcontent.length,
+                itemCount: blogcontents.length,
                 itemBuilder: (context, index) => ListTile(
-               leading: Image(image: AssetImage(blogcontent[index])),
-              )),
+                  leading: Image(
+                    image: AssetImage(
+                      blogcontents[index].imagePath,
+                    ),
+                  ),
+                ),
+              ),
             ),
             //subscribe card
             SubscribeCard(size: size),
@@ -69,5 +67,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
