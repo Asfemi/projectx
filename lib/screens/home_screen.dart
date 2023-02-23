@@ -47,13 +47,18 @@ class _HomeScreenState extends State<HomeScreen> {
               height: prescribedHeight,
               child: ListView.builder(
                 itemCount: blogcontents.length,
-                itemBuilder: (context, index) => ListTile(
+                
+                itemBuilder: (context, index) { 
+                  if (index != 4){
+                    return ListTile(
                   leading: Image(
                     image: AssetImage(
                       blogcontents[index].imagePath,
                     ),
                   ),
-                ),
+                );
+                  }el
+                  }
               ),
             ),
             //subscribe card
