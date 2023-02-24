@@ -56,6 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       blogcontents[index].imagePath,
                     ),
                   ),
+                  title:  Text(blogcontents[index].title,),
+                  subtitle:  Text(blogcontents[index].subTitle,),
                 );
                   }else{
                     //tbkhs
