@@ -49,6 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: blogcontents.length,
                 
                 itemBuilder: (context, index) { 
+                  //instead of using the if statement here 
+                  //you a for statement to creat a list with four Elements
+                  //and just use it normally,
                   if (index != 4){
                     return ListTile(
                   leading: Image(
