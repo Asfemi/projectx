@@ -18,31 +18,31 @@ class Utilities {
         title: 'Title',
         subTitle:  "subTitle",
       ),
-      BlogContent(
-          imagePath: 'lib/assets/images/j.jpg',
-        title: 'Title',
-        subTitle: "subTitle",
-      ),
-      BlogContent(
-          imagePath: 'lib/assets/images/n.jpg',
-        title: 'Title',
-        subTitle: "subTitle",
-      ),
-      BlogContent(
-          imagePath: 'lib/assets/images/kiss.jpg',
-        title: 'Title',
-        subTitle: "subTitle",
-      ),
-      BlogContent(
-         imagePath: 'lib/assets/images/lip.jpg',
-        title: 'Title',
-        subTitle: "subTitle",
-      ),
-      BlogContent(
-         imagePath: 'lib/assets/images/gad.jpg',
-        title: 'Title',
-        subTitle: "subTitle",
-      ),
+      // BlogContent(
+      //     imagePath: 'lib/assets/images/j.jpg',
+      //   title: 'Title',
+      //   subTitle: "subTitle",
+      // ),
+      // BlogContent(
+      //     imagePath: 'lib/assets/images/n.jpg',
+      //   title: 'Title',
+      //   subTitle: "subTitle",
+      // ),
+      // BlogContent(
+      //     imagePath: 'lib/assets/images/kiss.jpg',
+      //   title: 'Title',
+      //   subTitle: "subTitle",
+      // ),
+      // BlogContent(
+      //    imagePath: 'lib/assets/images/lip.jpg',
+      //   title: 'Title',
+      //   subTitle: "subTitle",
+      // ),
+      // BlogContent(
+      //    imagePath: 'lib/assets/images/gad.jpg',
+      //   title: 'Title',
+      //   subTitle: "subTitle",
+      // ),
     ];
   }
 }

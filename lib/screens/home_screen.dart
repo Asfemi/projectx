@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double prescribedHeight = size.height * 0.8;
-    List<BlogContent>blogcontents = Utilities.blogContentList();
+    List<BlogContent> blogcontents = Utilities.blogContentList();
 
     return Scaffold(
       backgroundColor: CustomColor.white,
@@ -42,31 +42,60 @@ class _HomeScreenState extends State<HomeScreen> {
             QuoteWidget(size: size),
             //section display
             SectionsDisplay(prescribedHeight: prescribedHeight, size: size),
-            //blog reads
-            SizedBox(
-              height: prescribedHeight,
+            Container(
+              color: Colors.amber,
+              height: size.height,
               child: ListView.builder(
-                itemCount: blogcontents.length,
                 
-                itemBuilder: (context, index) { 
-                  //instead of using the if statement here 
-                  //you a for statement to creat a list with four Elements
-                  //and just use it normally,
-                  if (index != 4){
-                    return ListTile(
-                  leading: Image(
-                    image: AssetImage(
-                      blogcontents[index].imagePath,
-                    ),
-                  ),
-                  title:  Text(blogcontents[index].title,),
-                  subtitle:  Text(blogcontents[index].subTitle,),
-                );
-                  }else{
-                    //tbkhs
-                  }
-                  }
-              ),
+                  itemCount: blogcontents.length,
+                  itemBuilder: (context, index) {
+                    //instead of using the if statement here
+                    //you a for statement to creat a list with four Elements
+                    //and just use it normally,
+                   // if (index != 3) {
+                      return //blog reads
+                          InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: size.height * 0.2,
+                          margin: const EdgeInsets.only(left:40, right: 40),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  child: Image(
+                                    image: AssetImage(
+                                      blogcontents[index].imagePath,
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        blogcontents[index].title,
+                                      ),
+                                      Text(
+                                        blogcontents[index].subTitle,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    // } else {
+                    //   //tbkhs
+                    // }
+                  }),
             ),
             //subscribe card
             SubscribeCard(size: size),
