@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.amber,
               height: size.height,
               child: ListView.builder(
-                
+                //rather than using a listview just use a column plus a custom widget
                   itemCount: blogcontents.length,
                   itemBuilder: (context, index) {
                     //instead of using the if statement here
