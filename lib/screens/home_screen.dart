@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectx/model/blogmodel.dart';
+import 'package:projectx/model/directors_card_model.dart';
 import 'package:projectx/util/constants.dart';
 
 import '../components/custom_app_bar_widget.dart';
@@ -29,9 +30,41 @@ class _HomeScreenState extends State<HomeScreen> {
     Size size = MediaQuery.of(context).size;
     double prescribedHeight = size.height * 0.8;
     List<BlogContent> blogcontents = Utilities.blogContentList();
+    List<DirectorsCardContent> directorscontents =
+        Utilities.directorsCardList();
 
     return Scaffold(
       backgroundColor: CustomColor.white,
+      drawer: SizedBox(
+        width: size.width * 0.7,
+        child: Drawer(
+          child: Container(
+            padding: const EdgeInsets.all(12.0),
+            child: GridView.builder(
+              itemCount: directorscontents.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 4.0,
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
+                //TODO: make this an actual network image
+                return Column(
+                  children: [
+                    SizedBox(
+                      height: size.height * 0.33,
+                      child: Image.asset(directorscontents[index].imagePath),
+                      
+                      ),
+                      Text(directorscontents[index].title),
+                      SizedBox(height: 20),
+                      Text(directorscontents[index].subTitle),
+                  ],
+                );
+              },
+            ),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -55,4 +88,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
