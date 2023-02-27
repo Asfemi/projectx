@@ -77,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //section display
             SectionsDisplay(prescribedHeight: prescribedHeight, size: size),
             HomeNewsDisplay(size: size, blogcontents: blogcontents),
+            SizedBox(height: size.height * 0.2),
             //subscribe card
             SubscribeCard(size: size),
             SizedBox(height: size.height * 0.2),
