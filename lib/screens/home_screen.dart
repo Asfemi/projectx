@@ -39,13 +39,17 @@ class _HomeScreenState extends State<HomeScreen> {
       key: _key,
       backgroundColor: CustomColor.white,
       drawer: HomeDrawerWidget(size: size, directorscontents: directorscontents),
+      endDrawer: Container(),
       body: SingleChildScrollView(
         child: Column(
           children: [
             //appBar
             CustomAppBarWidget(size: size, 
-            onTap: () {
+            onTapLeading: () {
                 _key.currentState!.openDrawer(); //<-- SEE HERE
+              },
+            onTapTrailing: () {
+                _key.currentState!.openEndDrawer(); //<-- SEE HERE
               },
             ),
             //home image

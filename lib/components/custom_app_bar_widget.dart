@@ -10,11 +10,12 @@ class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({
     super.key,
     required this.size,
-    required this.onTap,
+    required this.onTapLeading, required this.onTapTrailing,
   });
 
   final Size size;
-  final VoidCallback onTap;
+  final VoidCallback onTapLeading;
+  final VoidCallback onTapTrailing;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class CustomAppBarWidget extends StatelessWidget {
                   size: iconSize,
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
-                onPressed: onTap,
+                onPressed: onTapLeading,
               ),
               const SizedBox(width: 20),
               Text(
@@ -72,7 +73,7 @@ class CustomAppBarWidget extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               IconButton(
-                onPressed: () {},
+                onPressed: onTapTrailing,
                 icon: Icon(
                   Icons.more_horiz,
                   size: iconSize,
