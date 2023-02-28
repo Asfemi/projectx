@@ -25,7 +25,7 @@ class HomeDrawerWidget extends StatelessWidget {
                 crossAxisSpacing: 4.0,
                 mainAxisSpacing: 4.0),
             itemBuilder: (BuildContext context, int index) {
-              //TODO: make this an actual network image
+              //TODO: make this an actual network images
               return Column(
                 children: [
                   SizedBox(

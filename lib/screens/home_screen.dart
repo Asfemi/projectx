@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projectx/components/home_endDrawer_widget.dart';
 import 'package:projectx/model/blogmodel.dart';
 import 'package:projectx/model/directors_card_model.dart';
 import 'package:projectx/util/constants.dart';
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
       key: _key,
       backgroundColor: CustomColor.white,
       drawer: HomeDrawerWidget(size: size, directorscontents: directorscontents),
-      endDrawer: Container(),
+      endDrawer: HomeEndDrawerWidget(size: size, directorscontents: directorscontents),
       body: SingleChildScrollView(
         child: Column(
           children: [
