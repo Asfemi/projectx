@@ -33,15 +33,21 @@ class _HomeScreenState extends State<HomeScreen> {
     List<BlogContent> blogcontents = Utilities.blogContentList();
     List<DirectorsCardContent> directorscontents =
         Utilities.directorsCardList();
+    final GlobalKey<ScaffoldState> _key = GlobalKey(); // Create a key
 
     return Scaffold(
+      key: _key,
       backgroundColor: CustomColor.white,
       drawer: HomeDrawerWidget(size: size, directorscontents: directorscontents),
       body: SingleChildScrollView(
         child: Column(
           children: [
             //appBar
-            CustomAppBarWidget(size: size),
+            CustomAppBarWidget(size: size, 
+            onTap: () {
+                _key.currentState!.openDrawer(); //<-- SEE HERE
+              },
+            ),
             //home image
             HomebodyWidget(prescribedHeight: prescribedHeight, size: size),
             //qoute text

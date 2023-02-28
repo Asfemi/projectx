@@ -4,14 +4,17 @@ import 'package:line_icons/line_icons.dart';
 
 import '../util/constants.dart';
 import 'app_bar_texts_widget.dart';
+import 'package:projectx/screens/home_screen.dart';
 
 class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({
     super.key,
     required this.size,
+    required this.onTap,
   });
 
   final Size size;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,7 @@ class CustomAppBarWidget extends StatelessWidget {
                   size: iconSize,
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
-                onPressed: () {},
+                onPressed: onTap,
               ),
               const SizedBox(width: 20),
               Text(
