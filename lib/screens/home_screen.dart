@@ -4,6 +4,7 @@ import 'package:projectx/model/directors_card_model.dart';
 import 'package:projectx/util/constants.dart';
 
 import '../components/custom_app_bar_widget.dart';
+import '../components/home_drawer_widget.dart';
 import '../components/home_body_widget.dart';
 import '../components/home_news_display.dart';
 import '../components/quotes_widget.dart';
@@ -35,36 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: CustomColor.white,
-      drawer: SizedBox(
-        width: size.width * 0.7,
-        child: Drawer(
-          child: Container(
-            padding: const EdgeInsets.all(12.0),
-            child: GridView.builder(
-              itemCount: directorscontents.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0),
-              itemBuilder: (BuildContext context, int index) {
-                //TODO: make this an actual network image
-                return Column(
-                  children: [
-                    SizedBox(
-                      height: size.height * 0.33,
-                      child: Image.asset(directorscontents[index].imagePath),
-                      
-                      ),
-                      Text(directorscontents[index].title),
-                      SizedBox(height: 20),
-                      Text(directorscontents[index].subTitle),
-                  ],
-                );
-              },
-            ),
-          ),
-        ),
-      ),
+      drawer: HomeDrawerWidget(size: size, directorscontents: directorscontents),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -89,3 +61,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
