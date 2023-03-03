@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/blogmodel.dart';
+import '../screens/blog_screen.dart';
 
 class HomeNewsDisplay extends StatelessWidget {
   const HomeNewsDisplay({
@@ -28,7 +29,9 @@ class HomeNewsDisplay extends StatelessWidget {
            // if (index != 3) {
               return //blog reads
                   InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (){const BlogScreen();} ));
+                },
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                   height: size.height * 0.33,
@@ -37,13 +40,11 @@ class HomeNewsDisplay extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 1,
-                        child: Container(
-                          child: Image(
-                            image: AssetImage(
-                              blogcontents[index].imagePath,
-                            ),
-                            fit: BoxFit.cover,
+                        child: Image(
+                          image: AssetImage(
+                            blogcontents[index].imagePath,
                           ),
+                          fit: BoxFit.cover,
                         ),
                       ),
                       Expanded(
