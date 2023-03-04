@@ -30,7 +30,10 @@ class HomeNewsDisplay extends StatelessWidget {
               return //blog reads
                   InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (){const BlogScreen();} ));
+                  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const BlogScreen()),
+  );
                 },
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
