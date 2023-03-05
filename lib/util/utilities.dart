@@ -79,7 +79,36 @@ class Utilities {
         title: 'Title',
         subTitle:  "subTitle",
       ),
-      
+      DirectorsCardContent(
+          imagePath: 'lib/assets/images/j.jpg',
+        title: 'Title',
+        subTitle: "subTitle",
+      ),
+      DirectorsCardContent(
+          imagePath: 'lib/assets/images/n.jpg',
+        title: 'Title',
+        subTitle: "subTitle",
+      ),
+      DirectorsCardContent(
+          imagePath: 'lib/assets/images/kiss.jpg',
+        title: 'Title',
+        subTitle: "subTitle",
+      ),
+      DirectorsCardContent(
+        imagePath: 'lib/assets/images/a.jpg',
+        title: 'Title',
+        subTitle: "subTitle",
+      ),
+      DirectorsCardContent(
+        imagePath: 'lib/assets/images/e.jpg',
+        title: 'Title',
+        subTitle: "subTitle",
+      ),
+      DirectorsCardContent(
+        imagePath: 'lib/assets/images/h.jpg',
+        title: 'Title',
+        subTitle:  "subTitle",
+      ),
     ];
   }
 }
