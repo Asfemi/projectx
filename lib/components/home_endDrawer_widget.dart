@@ -21,6 +21,11 @@ class HomeEndDrawerWidget extends StatelessWidget {
     return SizedBox(
       width: size.width * 0.7,
       child: Drawer(
+        shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(0),
+                  bottomRight: Radius.circular(0)),
+            ),
         child: Container(
           padding: const EdgeInsets.all(12.0),
           child: Column(

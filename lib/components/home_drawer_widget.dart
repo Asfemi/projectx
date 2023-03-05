@@ -16,14 +16,16 @@ class HomeDrawerWidget extends StatelessWidget {
     return SizedBox(
       width: size.width * 0.7,
       child: Drawer(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(0), bottomRight: Radius.circular(0)),
+        ),
         child: Container(
           padding: const EdgeInsets.all(12.0),
           child: GridView.builder(
             itemCount: directorscontents.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 4.0,
-                mainAxisSpacing: 4.0),
+                crossAxisCount: 3, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
             itemBuilder: (BuildContext context, int index) {
               //TODO: make this an actual network images
               return Column(
@@ -31,11 +33,10 @@ class HomeDrawerWidget extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.33,
                     child: Image.asset(directorscontents[index].imagePath),
-                    
-                    ),
-                    Text(directorscontents[index].title),
-                    SizedBox(height: 20),
-                    Text(directorscontents[index].subTitle),
+                  ),
+                  Text(directorscontents[index].title),
+                  SizedBox(height: 20),
+                  Text(directorscontents[index].subTitle),
                 ],
               );
             },
