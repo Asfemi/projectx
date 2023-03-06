@@ -66,7 +66,7 @@ class HomeDrawerWidget extends StatelessWidget {
                   //TODO: make this an actual network images
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(
+                    child: SizedBox(
                       height: size.height * 0.45,
                       child: Column(
                         children: [
