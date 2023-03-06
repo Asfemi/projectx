@@ -53,8 +53,8 @@ class HomeDrawerWidget extends StatelessWidget {
                 ),
               ),
               GridView.builder(
-                primary: true,
-                scrollDirection: Axis.vertical,
+                //primary: true,
+                //scrollDirection: Axis.vertical,
                 physics: const ScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: directorscontents.length,
