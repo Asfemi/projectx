@@ -22,36 +22,56 @@ class HomeEndDrawerWidget extends StatelessWidget {
       width: size.width * 0.7,
       child: Drawer(
         shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(0),
-                  bottomRight: Radius.circular(0)),
-            ),
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(0), bottomRight: Radius.circular(0)),
+        ),
         child: Container(
           padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('AULC LAW COPORATION', style: GoogleFonts.cormorantGaramond(
-          fontSize: 15,
-          fontWeight: FontWeight.w700,
-          color: CustomColor.teal,
-        ),),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: CustomColor.teal,
+                      size: 25,
+                    ),
+                  ),
+                  Expanded(child: Container()),
+                  Text(
+                    'AULC LAW COPORATION',
+                    style: GoogleFonts.cormorantGaramond(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w700,
+                      color: CustomColor.teal,
+                    ),
+                  ),
+                  Expanded(child: Container()),
+                ],
+              ),
               EndDrawerText(text: 'OUR PEOPLE', onTap: () {}),
               EndDrawerText(text: 'OUR EXPERTISE', onTap: () {}),
               EndDrawerText(text: 'FOREFRONT', onTap: () {}),
               EndDrawerText(text: 'NEWS', onTap: () {}),
               EndDrawerText(text: 'COMUNITY', onTap: () {}),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-              EndDrawerSmallerText(text: 'ABOUT US', onTap: () {}),
-              EndDrawerSmallerText(text: 'CAREERS', onTap: () {}),
-              EndDrawerSmallerText(text: 'CONTACT US', onTap: () {}),
-              EndDrawerSmallerText(text: 'CONTRIBUTION', onTap: () {}),
-              ],),
-              
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  EndDrawerSmallerText(text: 'ABOUT US', onTap: () {}),
+                  EndDrawerSmallerText(text: 'CAREERS', onTap: () {}),
+                  EndDrawerSmallerText(text: 'CONTACT US', onTap: () {}),
+                  EndDrawerSmallerText(text: 'CONTRIBUTION', onTap: () {}),
+                ],
+              ),
             ],
           ),
         ),
@@ -59,6 +79,3 @@ class HomeEndDrawerWidget extends StatelessWidget {
     );
   }
 }
-
-
-
