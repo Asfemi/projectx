@@ -26,27 +26,33 @@ class AppBarTextsWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text(
-            text1,
-            style: GoogleFonts.montserrat(
-                fontSize: 18, fontWeight: FontWeight.w300, color: Colors.white),
-          ),
-          Text(
-            text2,
-            style: GoogleFonts.montserrat(
-                fontSize: 18, fontWeight: FontWeight.w300, color: Colors.white),
-          ),
-          Text(
-            text3,
-            style: GoogleFonts.montserrat(
-                fontSize: 18, fontWeight: FontWeight.w300, color: Colors.white),
-          ),
-          Text(
-            text4,
-            style: GoogleFonts.montserrat(
-                fontSize: 18, fontWeight: FontWeight.w300, color: Colors.white),
-          ),
+          AppBarTextbutton(text: text1, onPressed: () {  },),
+          AppBarTextbutton(text: text2, onPressed: () {  },),
+          AppBarTextbutton(text: text3, onPressed: () {  },),
+          AppBarTextbutton(text: text4, onPressed: () {  },),
         ],
+      ),
+    );
+  }
+}
+
+class AppBarTextbutton extends StatelessWidget {
+  const AppBarTextbutton({
+    super.key,
+    required this.text, required this.onPressed,
+  });
+
+  final String text;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPressed,
+      child: Text(
+        text,
+      style: GoogleFonts.montserrat(
+          fontSize: 18, fontWeight: FontWeight.w300, color: Colors.white,),
       ),
     );
   }
